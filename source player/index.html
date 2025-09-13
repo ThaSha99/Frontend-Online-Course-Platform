@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stitch Design</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500;600;700;900&family=Noto+Sans:wght@400;500;700;900" rel="stylesheet" />
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- TailwindCSS CDN (with forms + container queries plugin) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Favicon (empty, optional) -->
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+  <div class="relative flex min-h-screen flex-col">
+    <main class="flex flex-1">
+      <!-- Sidebar -->
+      <aside class="w-80 border-r border-gray-200 p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4 mt-8">Course Content</h3>
+        <nav class="space-y-1">
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">play_circle</span>
+            <span class="flex-1 truncate">Introduction to Python</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-600">
+            <span class="material-symbols-outlined">play_circle</span>
+            <span class="flex-1 truncate">Setting Up Your Environment</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">play_circle</span>
+            <span class="flex-1 truncate">Basic Syntax</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">play_circle</span>
+            <span class="flex-1 truncate">Data Structures</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">play_circle</span>
+            <span class="flex-1 truncate">Control Flow</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">play_circle</span>
+            <span class="flex-1 truncate">Functions</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">play_circle</span>
+            <span class="flex-1 truncate">Object-Oriented Programming</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">play_circle</span>
+            <span class="flex-1 truncate">Modules and Packages</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">lock</span>
+            <span class="flex-1 truncate">File I/O</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">lock</span>
+            <span class="flex-1 truncate">Error Handling</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">lock</span>
+            <span class="flex-1 truncate">Working with Databases</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">lock</span>
+            <span class="flex-1 truncate">Web Development with Flask</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">lock</span>
+            <span class="flex-1 truncate">Testing and Debugging</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">lock</span>
+            <span class="flex-1 truncate">Deployment</span>
+          </a>
+          <a href="#" data-lesson class="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">
+            <span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600">lock</span>
+            <span class="flex-1 truncate">Final Project</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <div class="flex-1 p-8">
+        <div class="mx-auto max-w-4xl">
+          <!-- Video Player -->
+          <div class="aspect-video w-full overflow-hidden rounded-lg bg-black">
+            <video
+              id="course-video"
+              controls
+              class="h-full w-full"
+              poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDMhKsrwigQThK0zoMKQVO0WdUHgQua17EjagzZWMCUQpt-8olMXoZwcYov1sqvZUfNk_yxGIbhnZZN2C7o9DtmziRK1RuEfbni-AMFGJo2KkMeYOI3s3J1jG6fA_yA_QnsGwDY3Pv3_ipGQZKNJ_HkYcmyTTXKuloYW90BozwfTYQkyPDwkWxcEh9Ir6TZMYy3u382mqBgMRpKad5OGrYEUP8tUKzqiJUiKO8gcrW_CafU-_daaj816RBRGOVJ8a_r9Lu79Kl0ZtOq"
+            >
+              <source id="video-source" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Tabs -->
+          <div class="mt-8">
+            <div class="border-b border-gray-200">
+              <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                <a href="#" data-tab="materials" aria-current="page" class="whitespace-nowrap border-b-2 border-blue-500 py-4 px-1 text-sm font-medium text-blue-600">Course Materials</a>
+                <a href="#" data-tab="discussions" class="whitespace-nowrap border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">Discussions</a>
+              </nav>
+            </div>
+
+            <!-- Course Materials -->
+            <section id="materialsPanel" class="mt-6" aria-labelledby="materials-tab">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Downloads</h3>
+              <div class="space-y-3">
+                <a href="#" class="flex items-center gap-4 rounded-lg border border-gray-200 p-4 hover:bg-gray-50">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div class="flex-1">
+                    <p class="font-medium text-gray-800">Course Syllabus</p>
+                    <p class="text-sm text-gray-500">PDF</p>
+                  </div>
+                  <span class="material-symbols-outlined text-gray-400">download</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 rounded-lg border border-gray-200 p-4 hover:bg-gray-50">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div class="flex-1">
+                    <p class="font-medium text-gray-800">Lecture Notes - Week 1</p>
+                    <p class="text-sm text-gray-500">PDF</p>
+                  </div>
+                  <span class="material-symbols-outlined text-gray-400">download</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 rounded-lg border border-gray-200 p-4 hover:bg-gray-50">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div class="flex-1">
+                    <p class="font-medium text-gray-800">Lecture Notes - Week 2</p>
+                    <p class="text-sm text-gray-500">PDF</p>
+                  </div>
+                  <span class="material-symbols-outlined text-gray-400">download</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 rounded-lg border border-gray-200 p-4 hover:bg-gray-50">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div class="flex-1">
+                    <p class="font-medium text-gray-800">Lecture Notes - Week 3</p>
+                    <p class="text-sm text-gray-500">PDF</p>
+                  </div>
+                  <span class="material-symbols-outlined text-gray-400">download</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 rounded-lg border border-gray-200 p-4 hover:bg-gray-50">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div class="flex-1">
+                    <p class="font-medium text-gray-800">Lecture Notes - Week 4</p>
+                    <p class="text-sm text-gray-500">PDF</p>
+                  </div>
+                  <span class="material-symbols-outlined text-gray-400">download</span>
+                </a>
+              </div>
+            </section>
+
+            <!-- Discussions -->
+            <section id="discussionsPanel" class="mt-12 hidden" aria-labelledby="discussions-tab">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Discussions</h3>
+              <div class="space-y-6">
+                <div class="flex gap-4">
+                  <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGb9z1-Z-apwwbiDtym9boe-JhiivxK1TJY_SiMcwqP9O5UybfhOodXlqByMfHFCOLiOuB2Z8uo1JiuUrQbJFxzJSXtupq6PLI5yN3E51j4hQPq2oSbbcVQBITVZm93kZOlExvx_8ZeNtFVsFGnPHosf_N_aadoIPcho5cF8dAwmRWmx_BIjnKqOCBVeP0OAlT_GgJBFMi36aZH58Pf91VyjGg7L77PdQyFGW9zMlHMhkNx5fNHSsL7iPR2GTejfAjYz6wH9tlZw0V");'></div>
+                  <div class="flex-1">
+                    <div class="flex items-baseline gap-2">
+                      <p class="font-semibold text-gray-800">Sophia Bennett</p>
+                      <p class="text-xs text-gray-500">2 days ago</p>
+                    </div>
+                    <p class="mt-1 text-sm text-gray-700">This introduction is very clear and helpful. I'm excited to learn more!</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABKORINzPbdIWfYsjeVAvFKso1VS3l99pZSOnTjJFD6IeZcOujktYtdWsmCROIQHutfz8YuCkTm_6EieHf18WkElEWfolK3k9xnjOC80EgxiefdSOAieLxBzlA6SCWA0-XVWozXZrqwE1I-1Ebw4tt3NzyzqhfF-pf51gMIJQG1rP8Hiesqt40mpIN0W-gLLYEBkWJC7fHuaaBaLkemxciUmHoYBdRZJsIG-2oZmaA8q76LdUpQwieI2OtMl73GynT5OBvouFdeRF4");'></div>
+                  <div class="flex-1">
+                    <div class="flex items-baseline gap-2">
+                      <p class="font-semibold text-gray-800">Ethan Carter</p>
+                      <p class="text-xs text-gray-500">1 day ago</p>
+                    </div>
+                    <p class="mt-1 text-sm text-gray-700">I'm having trouble setting up my environment. Can anyone help?</p>
+                  </div>
+                </div>
+
+                <div class="ml-14 flex gap-4">
+                  <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6bS8trrIQJuPXN3wrDTWEK3fdCspE0jeWmOZNErDwnuBcEha2u1rAZOs_Tc5GFd33etzSlV-mkqriEMWVAzekJ2GiVn6V-LrRF9MmWk3aV7dh_Z5NAWyoMSwFzPgL6w-OFmolUqw60FopbKLdbQIO-B8Y-LeEsOINBttK8xe3QkkzVKTfKPaA8i7kYh8zlBG26bI0NjbxfGV6kmiIwoNm95alW3IdoXzs9RhfV4oZTmZIGgMb5Vmh-vW-374pQSQIV1bvHmkPp8aI");'></div>
+                  <div class="flex-1">
+                    <div class="flex items-baseline gap-2">
+                      <p class="font-semibold text-gray-800">Olivia Davis</p>
+                      <p class="text-xs text-gray-500">12 hours ago</p>
+                    </div>
+                    <p class="mt-1 text-sm text-gray-700">Ethan, I had the same issue. Make sure you have the latest version of Python installed.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
