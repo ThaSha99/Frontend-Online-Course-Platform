@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduLearn - Browse Courses</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link rel="stylesheet" href="styles/main.css"/>
+</head>
+
+<body class="bg-white text-gray-800">
+<div class="flex flex-col min-h-screen">
+<main class="flex-grow">
+<section class="bg-gray-50 py-20">
+<div class="container mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Browse Top Courses</h1>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Explore a wide range of courses to enhance your skills and knowledge.</p>
+<div class="relative w-full max-w-xl mx-auto">
+<input id="searchInput" class="w-full pl-4 pr-32 py-3 border border-gray-300 rounded-full bg-white focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent" placeholder="What do you want to learn?" type="search"/>
+<button id="searchBtn" class="absolute right-1 top-1 bottom-1 btn-primary px-6 rounded-full text-sm font-semibold">Search</button>
+</div>
+</div>
+</section>
+<div class="container mx-auto px-6 py-12">
+<div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="relative">
+  <select id="categoryFilter" class="appearance-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-8 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+    <option>Categories</option>
+    <option>Development</option>
+    <option>Design</option>
+    <option>Marketing</option>
+  </select>
+  <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+  <select id="difficultyFilter" class="appearance-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-8 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+    <option>Difficulty</option>
+    <option>Beginner</option>
+    <option>Intermediate</option>
+    <option>Advanced</option>
+  </select>
+  <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+  <select id="priceFilter" class="appearance-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-8 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+    <option>Price</option>
+    <option>Free</option>
+    <option>Paid</option>
+  </select>
+  <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+<button id="applyFiltersBtn" class="btn-primary font-semibold px-6 py-2 rounded-md">Apply</button>
+</div>
+<div class="relative">
+  <select id="sortFilter" class="appearance-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-8 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+    <option>Sort by: Popularity</option>
+    <option>Sort by: Newest</option>
+    <option>Sort by: Rating</option>
+  </select>
+  <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div id="coursesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<a class="block" href="#">
+<img alt="Course thumbnail" class="w-full h-40 object-cover group-hover:opacity-90 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbaa-bEbJLK2CK561xJuADC1K3ZPc3DimZVSt1aMAQfw1R_EOmIAgKZfn4qzThKkrmw_o5KmDSeiIobYyvxWJ62VYEvzhbPhMn4b7e5b2nVfNQJ1rI0eBWZkZUBUhtSTe8Jlymct5yEEPP7ZPlMaIrc1sMY9dlcc-Fd5qDMpV-pXe5pTLNgqQtet-Rq644ljuyYp1PlEAVh5YtIyF9-ehDO4vuApLni1Jx1vmGfpQEUSeTn9VW4CeZYFHfe09QbAi09CO579PcYhCh"/>
+</a>
+<div class="p-5">
+<h3 class="font-semibold text-lg h-14"><a class="hover:text-[var(--primary-color)]" href="#">Introduction to Data Science</a></h3>
+<p class="text-gray-500 text-sm mb-2">John Doe</p>
+<div class="flex items-center mb-3">
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-gray-300 material-symbols-outlined text-base">star</span>
+<span class="text-sm text-gray-500 ml-2">(1,234)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-gray-900">$49.99</p>
+<a class="btn-primary px-4 py-2 rounded-md text-sm font-semibold" href="#">Enroll</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<a class="block" href="#">
+<img alt="Course thumbnail" class="w-full h-40 object-cover group-hover:opacity-90 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA61Qo_-vEC8_9gFvmEPefvgu-_XoBlAfX4kamniZWaQLOjSHt0mk9vXDN9zj_tfC04pkRb76vjqtUzwvFaY_KltntWj8fK9B3MAEVgi18XLBFr_goZzkm8qu9jlyon3na283VsAnZg3XgMKxPl2w01PnqUPa0terHOEoDvXoX4hrvIjcWAcwwJj3pNY46pnKCQv_EvKLO9rbTlqHcareASrf8V3tcx__fJc_4-piEKtTEKfNfjtHjydpdscYA6ZweyepBaGGbGVwYg"/>
+</a>
+<div class="p-5">
+<h3 class="font-semibold text-lg h-14"><a class="hover:text-[var(--primary-color)]" href="#">Web Development Bootcamp</a></h3>
+<p class="text-gray-500 text-sm mb-2">Jane Smith</p>
+<div class="flex items-center mb-3">
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star_half</span>
+<span class="text-sm text-gray-500 ml-2">(2,456)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-gray-900">$89.99</p>
+<a class="btn-primary px-4 py-2 rounded-md text-sm font-semibold" href="#">Enroll</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<a class="block" href="#">
+<img alt="Course thumbnail" class="w-full h-40 object-cover group-hover:opacity-90 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgxyB_HZYppfYxcK3OotNBEr8yJvO2M_ThLTr4cun02uivulFdZuAlDvrXlt34VNsudHpQN7UUKAadE3CEFIGeI5GQTC3csRUMMNB_f-tIqj8vMrvGv2bRhRnOHrayu9qU4foZXc0dDvZe9qOZtZcY485LZBL-cecaeMQ6IWO6mGh3qYHvKkUL21T9pASbTM4qPl_rIPmBrSfNjZAdS6GOsq1Q6ll7tZGAehe2Uh9ahb4ypuCb_kocZPJboyZPneKrfBLI-0yKdnSe"/>
+</a>
+<div class="p-5">
+<h3 class="font-semibold text-lg h-14"><a class="hover:text-[var(--primary-color)]" href="#">Digital Marketing Fundamentals</a></h3>
+<p class="text-gray-500 text-sm mb-2">Alex Johnson</p>
+<div class="flex items-center mb-3">
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-gray-300 material-symbols-outlined text-base">star</span>
+<span class="text-sm text-gray-500 ml-2">(987)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-gray-900">Free</p>
+<a class="btn-primary px-4 py-2 rounded-md text-sm font-semibold" href="#">Enroll</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden group">
+<a class="block" href="#">
+<img alt="Course thumbnail" class="w-full h-40 object-cover group-hover:opacity-90 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiJ_c0DNvk043b5zzat_TT8EgTk6LxNIJGN3tAVKVBCeCgfhnNsy3TzPjoA77gaNBv9DcdKTtz-PGW0vzpGV_d5lqx7Da-uE2hRygMuvywqDReYnSzjva5RyxD_3gDoBcMdKWja8JWZZrxmtuUv1h5sSVkpxN9YRgdPcOmr9JhCuPjxs_e_WoU1oBRcWVt34nYQCRdPNQg4TgaWrWx_OS6LtyukiRoXkOSn5dK80lclzyXIF9m67tKKXPegerEObj2rdV9-iLhSeUw"/>
+</a>
+<div class="p-5">
+<h3 class="font-semibold text-lg h-14"><a class="hover:text-[var(--primary-color)]" href="#">Graphic Design Masterclass</a></h3>
+<p class="text-gray-500 text-sm mb-2">Emily White</p>
+<div class="flex items-center mb-3">
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star</span>
+<span class="text-yellow-500 material-symbols-outlined text-base">star_half</span>
+<span class="text-sm text-gray-500 ml-2">(3,102)</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-gray-900">$99.99</p>
+<a class="btn-primary px-4 py-2 rounded-md text-sm font-semibold" href="#">Enroll</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="btn-primary font-semibold px-6 py-3 rounded-md">Load More</button>
+</div>
+</div>
+</main>
+</div>
+
+<script src="scripts/main.js" defer></script>
+</body></html>
